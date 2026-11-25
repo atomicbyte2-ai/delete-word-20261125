@@ -1,15 +1,15 @@
 // The Word You'd Delete From the Dictionary
 // Entry program: writes the single word to entry.txt in the output dir.
 //
-// The word: supercalifragilisticexpialidocious
-// Thirty-four letters of pure spectacle. Nobody can spell it, nobody
-// needs it, and the dictionary is lighter without it. Deleting it is
-// the joke: the word that exists only to be unspellable gets erased.
+// The word: forgettable
+// The joke deletes itself. A word that means "not worth remembering"
+// is the one word nobody would ever miss — erase it and nobody
+// notices it was ever there. The deletion is the punchline.
 
 import { mkdirSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
 
-const WORD = "supercalifragilisticexpialidocious";
+const WORD = "forgettable";
 
 function validate(word: string): void {
   // Length gate: 1-77 characters, matching the bounty gate.
