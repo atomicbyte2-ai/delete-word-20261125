@@ -1,6 +1,6 @@
 # The Word You'd Delete From the Dictionary
 
-> supercalifragilisticexpialidocious
+> forgettable
 
 `main.ts` holds the single word as a constant, validates it (1–77 characters, one word with no whitespace and no control characters), then writes it — with no trailing newline — to `entry.txt` inside `MAKEFUN_OUTPUT_DIR` (default `/output`), creating the directory if needed, and logs the character count.
 
