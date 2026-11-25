@@ -21,9 +21,13 @@ function validate(word: string): void {
     throw new Error("word must be a single word with no whitespace");
   }
   // No control characters.
-  // eslint-disable-next-line no-control-regex
   if (/[\u0000-\u001f\u007f]/.test(word)) {
     throw new Error("word must not contain control characters");
+  }
+  // A dictionary word is letters only: no digits, punctuation, or
+  // symbols smuggled in alongside the word.
+  if (!/^[A-Za-z]+$/.test(word)) {
+    throw new Error("word must contain letters only");
   }
   // Not only whitespace (covered by the whitespace check above, but
   // kept explicit so the intent is obvious).
